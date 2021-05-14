@@ -9,8 +9,8 @@ public class RunLengthEncoding {
         for(int currentChar = 1; currentChar <= toEncode.length(); ++currentChar){
             if(currentChar == toEncode.length() || toEncode.charAt(currentChar) != toEncode.charAt(currentChar-1))
             {
-                encodedString.append(consecutiveCharCount);
-                encodedString.append(toEncode.charAt(currentChar-1));
+                encodedString.append(consecutiveCharCount); //it will count the number of chars repeated
+                encodedString.append(toEncode.charAt(currentChar-1)); //it will store that char
                 consecutiveCharCount = 1; //resetting it to one
             }
             else
